@@ -13,8 +13,11 @@
  
  - To install the libraries:
     open the R studio console, run
+    
     %install.packages("shiny")
+    
     %install.packages("networkD3")
+    
     %install.packages("mongolite")
  
  - To run the app:
