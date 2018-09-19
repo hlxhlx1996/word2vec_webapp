@@ -22,5 +22,7 @@
  
  - To run the app:
     change the dir in R studio to the parent dir of "word2vec_webapp", and run
+    
     %library(shiny)
+    
     %runApp("work2vec_webapp")
