@@ -1,7 +1,7 @@
-# word2vec_webapp
+# vector visualization application
  - Description:
     This is a web application built with R to be used to visualize vector results in 128-dimensions from machine learning model word2vec. 
-    The backend database is based on MongoDB with properties including the index, target, group, and xN representing each dimensions.
+    The backend database is based on MongoDB with properties including the index, target, and xN representing each dimensions.
     The database is provided as a .csv file under /data.
     
  - Dependencies:
