@@ -63,21 +63,21 @@ getResult <- function(word, multiple, ob){
 		i <- 0
 		count <- getCount()
 		target_qry <- paste0('{"target" : "', word,'"}')
-
 		while (i < count) {
 			product <- 0
 			temp_qry <- paste0('{"index" : ', i,'}')
 			for (j in 1:128) {
 				index <- paste0('x', j)
 				field <- paste0('{"_id" : 0, "', index,'" : 1}')
-				
 				targetx <- loadData(target_qry, field)
 				tempx <- loadData(temp_qry, field)
 				temp_product <- (targetx-tempx)^2
+				
 				product <- (product + temp_product)
 			}
 			result <- product*multiple
-			update_field <- paste0('{"$set" : {"similarity": ', result,'}}')
+			update_field <- paste0('{"$set" : {"similarity":', result,'}}')
+
 			updateData(temp_qry, update_field)
 			i <- i+1
 		}
